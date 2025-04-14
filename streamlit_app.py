@@ -4,7 +4,7 @@ import time
 import re
 
 placeholderstr = "Please input your command"
-user_name = "Gild"
+user_name = "Didier"
 user_image = "https://www.w3schools.com/howto/img_avatar.png"
 
 def stream_data(stream_str):
