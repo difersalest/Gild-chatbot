@@ -62,7 +62,9 @@ def main():
                     st_c_chat.chat_message(msg["role"]).markdown((msg["content"]))
 
     def generate_response(prompt):
-        return 'Your text in binary is: '.join(format(x, 'b') for x in bytearray(prompt, 'utf-8'))
+        output = "Your text in binary is: "
+        output += ' '.join(format(x, 'b') for x in bytearray(prompt, 'utf-8'))
+        return output
         
         
     # Chat function section (timing included inside function)
