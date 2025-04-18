@@ -62,11 +62,8 @@ def main():
                     st_c_chat.chat_message(msg["role"]).markdown((msg["content"]))
 
     def generate_response(prompt):
-        pattern = r'\b(i(\'?m| am| feel| think i(\'?)?m)?\s*(so\s+)?(stupid|ugly|dumb|idiot|worthless|loser|useless))\b'
-        if re.search(pattern, prompt, re.IGNORECASE):
-            return "Yes, you are!"
-        else:
-            return f"You say: {prompt}."
+        return 'Your text in binary is: '.join(format(x, 'b') for x in bytearray(prompt, 'utf-8'))
+        
         
     # Chat function section (timing included inside function)
     def chat(prompt: str):
